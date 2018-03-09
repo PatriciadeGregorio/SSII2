@@ -1,0 +1,10 @@
+<div class="row pad-20">
+  <div *ngFor="let item of search" class="col-md-4" [routerLink]="['/info',item.id]">
+      <div class="bsbug panel-juego  card card-info">
+          <div class="card-heading">{{item.game}}</div>
+          <div class="card-body">
+            <img style="width:100%; border-radius:4px;" [src]="item.imageURL">
+          </div>
+      </div>
+  </div>
+</div>

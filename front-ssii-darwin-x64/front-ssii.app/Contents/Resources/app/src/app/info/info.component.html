@@ -1,0 +1,45 @@
+<div class="row">
+  <i [routerLink]="['/modification', game]" class="fa fa-pencil pencil" aria-hidden="true"></i>
+  <div style="margin-left: 53px;min-height: 500px;" class="col-md-10 div-border" >
+    <div class="row">
+      <div style="top:8vh;" class="col-md-6">
+          <h2>{{game.game}}</h2>
+          <p>{{game.description}}</p>
+          <div style="padding:15px;"class="row">
+            <div class="col-md-4">
+              <button (click)="open(content)" style="width:100%;text-align: center" type="button" class="btn btn-info"> Consultar guía  </button>
+            </div>
+            <div class="col-md-4">
+               <button style="width:100%;text-align: center" type="button" class="btn btn-info">  Solicitar demo  </button>
+            </div>
+            <div class="col-md-4">
+              <button style="width:100%;text-align: center" type="button" class="btn btn-info">  Comprar juego  </button>
+            </div>
+          </div>
+      </div>
+      <div style="min-height: 500px;" class="col-md-6"><img style="min-height: 500px; width:105%; border-radius:4px;" [src]="game.infoImage"></div>
+    </div>
+    <!-- <ng-template #content let-c="close" let-d="dismiss">
+      <div class="modal-header">
+        <h4 class="modal-title">Modal title</h4>
+        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <p>One fine body&hellip;</p>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-outline-dark" (click)="c('Close click')">Close</button>
+      </div>
+    </ng-template> -->
+    <ng-template #content let-c="close" let-d="dismiss">
+        <youtube-player
+          width="100%"
+          protocol="http"
+          videoId="qDuKsiwS5xw"
+          (change)="onStateChange($event)">
+        </youtube-player>
+    </ng-template>
+  <div class="col-md-1"> </div>
+</div>

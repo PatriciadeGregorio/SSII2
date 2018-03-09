@@ -1,0 +1,12 @@
+.div-border {
+  border-style: solid;
+  border-color: #f1efef;
+  margin-bottom: 20px
+}
+
+.pencil {
+  position: absolute;
+    font-size: 50px;
+    left: 40px;
+    z-index: 10000000000;
+}
